@@ -14,4 +14,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		SELECT * FROM `user`
 	</select>
 	
+	<select id="queryUserByQueryVo" resultType="User" parameterType="QueryVo">
+		SELECT * FROM `user` WHERE nick like '%${user.nick}%'
+	</select>
+	
 </mapper>
